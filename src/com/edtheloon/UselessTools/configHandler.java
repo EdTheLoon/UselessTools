@@ -65,6 +65,5 @@ public class configHandler {
 	public void loadConfig() {		
 		config.load();		
 		tools = config.getIntList("tools", null);		
-		UTMain.log.info("[UselessTools] DEBUG: Tools: " + tools.toString());
 	}
 }

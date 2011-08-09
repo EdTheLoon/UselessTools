@@ -1,6 +1,7 @@
 package com.edtheloon.UselessTools;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.config.Configuration;
@@ -40,7 +41,10 @@ public class configHandler {
 	
 	// Create the configuration file and insert default values
 	public void createConfig() {
-		config.setProperty("tools", "");
+		tools = new ArrayList<Integer>();
+		tools.add(260);
+		tools.add(300);
+		config.setProperty("tools", tools);
 		config.setHeader("# UselessTools Version " + plugin.getDescription().getVersion());
 		config.save();
 		
@@ -52,5 +56,6 @@ public class configHandler {
 	public void loadConfig() {		
 		config.load();		
 		tools = config.getIntList("tools", null);		
+		UTMain.log.info("[UselessTools] DEBUG: Tools: " + tools.toString());
 	}
 }

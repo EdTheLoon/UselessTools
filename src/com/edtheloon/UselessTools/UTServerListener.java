@@ -5,7 +5,7 @@ import org.bukkit.event.player.PlayerListener;
 
 public class UTServerListener extends PlayerListener {
 	
-	public void onPlayerInterectEvent(PlayerInteractEvent event)
+	public void onPlayerInteractEvent(PlayerInteractEvent event)
 	{		
 		int itemID = event.getItem().getTypeId();
 		if (UTMain.config.tools.contains(itemID)) {

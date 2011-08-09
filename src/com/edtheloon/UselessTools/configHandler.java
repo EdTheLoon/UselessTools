@@ -9,7 +9,7 @@ public class configHandler {
 	
 	// Configuration file properties
 	private Plugin plugin;
-	private File configFile = new File("plugins/" + plugin.getDescription().getName() + File.separator + "config.yml"); // Be sure to change the file this points to
+	private File configFile = new File("plugins/UselessTools" + File.separator + "config.yml"); // Be sure to change the file this points to
 	private Configuration config;
 	
 	// Config nodes and default variables

@@ -15,10 +15,11 @@ public class UTMain extends JavaPlugin {
 
 	public static configHandler config;
 	public static Logger log = Logger.getLogger("minecraft");
-	public PluginManager pm = this.getServer().getPluginManager();
+	public PluginManager pm;
 
 	public void onEnable() {
 		config = new configHandler(this);
+		pm = this.getServer().getPluginManager();
 		pm.registerEvent(Type.PLAYER_INTERACT, new UTServerListener(), Priority.Highest, this);
 		log.info("[UselessTools] Version " + this.getDescription().getVersion() + " enabled.");
 	}

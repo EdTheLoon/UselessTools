@@ -41,14 +41,23 @@ public class configHandler {
 	
 	// Create the configuration file and insert default values
 	public void createConfig() {
+		
+		// Create a default list - this list contains the IDs of all gold tools
 		tools = new ArrayList<Integer>();
-		tools.add(260);
-		tools.add(300);
+		tools.add(283);
+		tools.add(284);
+		tools.add(285);
+		tools.add(286);
+		tools.add(294);
+		
+		// Add the list to the tools property
 		config.setProperty("tools", tools);
+		// Set a header
 		config.setHeader("# UselessTools Version " + plugin.getDescription().getVersion());
+		// Finally, save the config to file
 		config.save();
 		
-		// Now that Config is created we can load the values
+		// Now that the config is created we can load the values
 		loadConfig();
 	}
 	

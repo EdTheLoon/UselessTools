@@ -1,0 +1,12 @@
+main: com.edtheloon.UselessTools.UTMain
+name: UselessTools
+author: EdTheLoon
+description: Make tools useless!
+version: 1.0
+
+commands:
+    ut:
+        description: Make tools useless
+        usage: |
+            /ut reload - Reload the configuration file
+            /ut disable - Disable this plugin
